@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Équation du second degré</title>
+    <style>
+        #result {
+          font-size: 1.2em;
+          font-weight: bold;
+          color: rgb(255, 255, 255);
+          display: flex;
+          justify-content: center;
+        }
+        body{
+          background-color: rgb(26, 26, 112);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+        h1{
+          color: aliceblue;
+          display: flex;
+          justify-content: center;
+        }
+        #refresh-button {
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        #refresh-button:hover {
+            background-color: #3e8e41;
+        }
+        
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #e31f1f;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header {
+            background-color: #e31f1f;
+            color: #fff;
+            padding: 2px 0;
+            text-align: center;
+            width: 100%;
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculateur d'équation du second degré</h1>
+    </header>
+    
+    <h1 id="msg"></h1>
+    <h1>Résultat de l'équation du second degré :</h1>
+    <div id="result"></div>
+    <script src="calculer.js"></script>
+    <button id="refresh-button">new function</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const refreshButton = document.getElementById('refresh-button');
+            refreshButton.addEventListener('click', () => {
+                // Recharge la page actuelle
+                window.location.reload();
+            });
+        });
+    </script>
+    
+    <footer>
+        <p>© 2024 Mon site web</p>
+    </footer>
+</body>
+</html>
